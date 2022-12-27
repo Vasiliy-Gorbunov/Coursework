@@ -8,7 +8,6 @@ public class Employee {
     private final int id;
 
 
-
     public Employee(String firstName, String secondName, String lastName, int department, int salary) {
         this.firstName = firstName;
         this.secondName = secondName;
@@ -51,11 +50,16 @@ public class Employee {
         this.salary = salary;
     }
 
+    public String separator() {
+        return "=================================";
+    }
+
     @Override
     public String toString() {
-        return "Сотрудник " + id + "\n " +
+        return "Сотрудник №" + id + ":\n " +
                 "ФИО: " + firstName + " " + secondName + " " + lastName + "\n " +
                 "Отдел: " + department + "\n " +
-                "Зарплата: " + salary;
+                "Зарплата: " + salary + "\n" +
+                separator();
     }
 }
